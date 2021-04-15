@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weitu.dao.custom.DeviceDao">
+    <resultMap id="BaseResultMap" type="com.weitu.model.gen.Device">
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="device_no" jdbcType="VARCHAR" property="deviceNo"/>
+        <result column="device_name" jdbcType="VARCHAR" property="deviceName"/>
+        <result column="device_type" jdbcType="VARCHAR" property="deviceType"/>
+        <result column="device_status" jdbcType="CHAR" property="deviceStatus"/>
+        <result column="device_son_type" jdbcType="VARCHAR" property="deviceSonType"/>
+        <result column="ip_url" jdbcType="VARCHAR" property="ipUrl"/>
+        <result column="com_protocol" jdbcType="VARCHAR" property="comProtocol"/>
+        <result column="device_port" jdbcType="VARCHAR" property="devicePort"/>
+        <result column="account_name" jdbcType="VARCHAR" property="accountName"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="org_name" jdbcType="VARCHAR" property="orgName"/>
+        <result column="org_id" jdbcType="VARCHAR" property="orgId"/>
+        <result column="main_no" jdbcType="VARCHAR" property="mainNo"/>
+        <result column="main_merchant_name" jdbcType="VARCHAR" property="mainMerchantName"/>
+        <result column="area_code" jdbcType="VARCHAR" property="areaCode"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="longitude" jdbcType="VARCHAR" property="longitude"/>
+        <result column="latitude" jdbcType="VARCHAR" property="latitude"/>
+        <result column="is_important" jdbcType="BIT" property="isImportant"/>
+        <result column="leader" jdbcType="VARCHAR" property="leader"/>
+        <result column="leader_tel" jdbcType="VARCHAR" property="leaderTel"/>
+        <result column="make_company" jdbcType="VARCHAR" property="makeCompany"/>
+        <result column="purchase_time" jdbcType="TIMESTAMP" property="purchaseTime"/>
+        <result column="use_expire_time" jdbcType="TIMESTAMP" property="useExpireTime"/>
+        <result column="device_model" jdbcType="VARCHAR" property="deviceModel"/>
+        <result column="supplier" jdbcType="VARCHAR" property="supplier"/>
+        <result column="supplier_contact" jdbcType="VARCHAR" property="supplierContact"/>
+        <result column="supplier_tel" jdbcType="VARCHAR" property="supplierTel"/>
+        <result column="device_url" jdbcType="VARCHAR" property="deviceUrl"/>
+        <result column="device_default_url" jdbcType="VARCHAR" property="deviceDefaultUrl"/>
+        <result column="created_by" jdbcType="VARCHAR" property="createdBy"/>
+        <result column="updated_by" jdbcType="VARCHAR" property="updatedBy"/>
+        <result column="gmt_created" jdbcType="TIMESTAMP" property="gmtCreated"/>
+        <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified"/>
+        <result column="data_version" jdbcType="INTEGER" property="dataVersion"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="delete_flag" jdbcType="BIT" property="deleteFlag"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+			id,
+			device_no,
+			device_name,
+			device_type,
+			device_status,
+			device_son_type,
+			ip_url,
+			com_protocol,
+			device_port,
+			account_name,
+			password,
+			org_name,
+			org_id,
+			main_no,
+			main_merchant_name,
+			area_code,
+			address,
+			longitude,
+			latitude,
+			is_important,
+			leader,
+			leader_tel,
+			make_company,
+			purchase_time,
+			use_expire_time,
+			device_model,
+			supplier,
+			supplier_contact,
+			supplier_tel,
+			device_url,
+			device_default_url,
+			created_by,
+			updated_by,
+			gmt_created,
+			gmt_modified,
+			data_version,
+			remark,
+			delete_flag
+    </sql>
+    <sql id="Base_Query_Condition">
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+             <if test="record.id != null and record.id != ''">
+                 AND id =  #{record.id,jdbcType=VARCHAR}
+             </if>
+             <if test="record.deviceNo != null and record.deviceNo != ''">
+                 AND device_no =  #{record.deviceNo,jdbcType=VARCHAR}
+             </if>
+             <if test="record.deviceName != null and record.deviceName != ''">
+                 AND device_name =  #{record.deviceName,jdbcType=VARCHAR}
+             </if>
+             <if test="record.deviceType != null and record.deviceType != ''">
+                 AND device_type =  #{record.deviceType,jdbcType=VARCHAR}
+             </if>
+             <if test="record.deviceStatus != null and record.deviceStatus != ''">
+                 AND device_status =  #{record.deviceStatus,jdbcType=CHAR}
+             </if>
+             <if test="record.deviceSonType != null and record.deviceSonType != ''">
+                 AND device_son_type =  #{record.deviceSonType,jdbcType=VARCHAR}
+             </if>
+             <if test="record.ipUrl != null and record.ipUrl != ''">
+                 AND ip_url =  #{record.ipUrl,jdbcType=VARCHAR}
+             </if>
+             <if test="record.comProtocol != null and record.comProtocol != ''">
+                 AND com_protocol =  #{record.comProtocol,jdbcType=VARCHAR}
+             </if>
+             <if test="record.devicePort != null and record.devicePort != ''">
+                 AND device_port =  #{record.devicePort,jdbcType=VARCHAR}
+             </if>
+             <if test="record.accountName != null and record.accountName != ''">
+                 AND account_name =  #{record.accountName,jdbcType=VARCHAR}
+             </if>
+             <if test="record.password != null and record.password != ''">
+                 AND password =  #{record.password,jdbcType=VARCHAR}
+             </if>
+             <if test="record.orgName != null and record.orgName != ''">
+                 AND org_name =  #{record.orgName,jdbcType=VARCHAR}
+             </if>
+             <if test="record.orgId != null and record.orgId != ''">
+                 AND org_id =  #{record.orgId,jdbcType=VARCHAR}
+             </if>
+             <if test="record.mainNo != null and record.mainNo != ''">
+                 AND main_no =  #{record.mainNo,jdbcType=VARCHAR}
+             </if>
+             <if test="record.mainMerchantName != null and record.mainMerchantName != ''">
+                 AND main_merchant_name =  #{record.mainMerchantName,jdbcType=VARCHAR}
+             </if>
+             <if test="record.areaCode != null and record.areaCode != ''">
+                 AND area_code =  #{record.areaCode,jdbcType=VARCHAR}
+             </if>
+             <if test="record.address != null and record.address != ''">
+                 AND address =  #{record.address,jdbcType=VARCHAR}
+             </if>
+             <if test="record.longitude != null and record.longitude != ''">
+                 AND longitude =  #{record.longitude,jdbcType=VARCHAR}
+             </if>
+             <if test="record.latitude != null and record.latitude != ''">
+                 AND latitude =  #{record.latitude,jdbcType=VARCHAR}
+             </if>
+             <if test="record.isImportant != null">
+                 AND is_important =  #{record.isImportant,jdbcType=BIT}
+             </if>
+             <if test="record.leader != null and record.leader != ''">
+                 AND leader =  #{record.leader,jdbcType=VARCHAR}
+             </if>
+             <if test="record.leaderTel != null and record.leaderTel != ''">
+                 AND leader_tel =  #{record.leaderTel,jdbcType=VARCHAR}
+             </if>
+             <if test="record.makeCompany != null and record.makeCompany != ''">
+                 AND make_company =  #{record.makeCompany,jdbcType=VARCHAR}
+             </if>
+             <if test="record.purchaseTime != null">
+                 AND purchase_time =  #{record.purchaseTime,jdbcType=TIMESTAMP}
+             </if>
+             <if test="record.useExpireTime != null">
+                 AND use_expire_time =  #{record.useExpireTime,jdbcType=TIMESTAMP}
+             </if>
+             <if test="record.deviceModel != null and record.deviceModel != ''">
+                 AND device_model =  #{record.deviceModel,jdbcType=VARCHAR}
+             </if>
+             <if test="record.supplier != null and record.supplier != ''">
+                 AND supplier =  #{record.supplier,jdbcType=VARCHAR}
+             </if>
+             <if test="record.supplierContact != null and record.supplierContact != ''">
+                 AND supplier_contact =  #{record.supplierContact,jdbcType=VARCHAR}
+             </if>
+             <if test="record.supplierTel != null and record.supplierTel != ''">
+                 AND supplier_tel =  #{record.supplierTel,jdbcType=VARCHAR}
+             </if>
+             <if test="record.deviceUrl != null and record.deviceUrl != ''">
+                 AND device_url =  #{record.deviceUrl,jdbcType=VARCHAR}
+             </if>
+             <if test="record.deviceDefaultUrl != null and record.deviceDefaultUrl != ''">
+                 AND device_default_url =  #{record.deviceDefaultUrl,jdbcType=VARCHAR}
+             </if>
+             <if test="record.createdBy != null and record.createdBy != ''">
+                 AND created_by =  #{record.createdBy,jdbcType=VARCHAR}
+             </if>
+             <if test="record.updatedBy != null and record.updatedBy != ''">
+                 AND updated_by =  #{record.updatedBy,jdbcType=VARCHAR}
+             </if>
+             <if test="record.gmtCreated != null">
+                 AND gmt_created =  #{record.gmtCreated,jdbcType=TIMESTAMP}
+             </if>
+             <if test="record.gmtModified != null">
+                 AND gmt_modified =  #{record.gmtModified,jdbcType=TIMESTAMP}
+             </if>
+             <if test="record.dataVersion != null">
+                 AND data_version =  #{record.dataVersion,jdbcType=INTEGER}
+             </if>
+             <if test="record.remark != null and record.remark != ''">
+                 AND remark =  #{record.remark,jdbcType=VARCHAR}
+             </if>
+                AND delete_flag = 0
+        </trim>
+    </sql>
+    <select id="selectByPage" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"></include>
+        FROM crs_device
+        <include refid="Base_Query_Condition"></include>
+        <if test="pageBegin > -1 and pageSize > 0 ">
+            LIMIT  #{pageBegin} ,  #{pageSize}
+        </if>
+    </select>
+    <select id="selectCount" resultType="java.lang.Integer">
+        SELECT
+        count(*)
+        FROM crs_device
+        <include refid="Base_Query_Condition"></include>
+    </select>
+</mapper>

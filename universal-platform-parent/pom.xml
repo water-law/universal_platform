@@ -60,7 +60,7 @@
     <modules>
         <module>../universal-platform-plat</module>
         <module>../universal-platform-eureka</module>
-        <!--<module>../mps-platform-fileServer</module>-->
+        <module>../universal-platform-fileServer</module>
         <module>../universal-platform-gateway</module>
         <!--<module>../mps-platform-web</module>        -->
     </modules>

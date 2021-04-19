@@ -28,10 +28,14 @@ public class GeneratorMain {
         //默认都为false，可选配
 //        baseConfigVo.setCreateBusiServiceFlag(true);
 //        baseConfigVo.setCreateControllerFlag(true);
+
 //        baseConfigVo.setCreateDaoFlag(true);
+
 //        baseConfigVo.setCreateMapperFlag(true);
+
 //        baseConfigVo.setCreatePojoBoFlag(true);
-        baseConfigVo.setCreatePojoVoFlag(true);
+//        baseConfigVo.setCreatePojoVoFlag(true);
+
 //        baseConfigVo.setCreateServiceFlag(true);
         List<GeneratorTableConfigVo> list = new ArrayList<>();
         //list.add(new GeneratorTableConfigVo("moj_data_third_trans_data_storage","thirdTransDataStorage", "chenzhiyi"));

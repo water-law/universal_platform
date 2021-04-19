@@ -88,12 +88,12 @@ public class ${clazzInfo.className}Service implements I${clazzInfo.className}Ser
 
     @Override
     public List<${clazzInfo.className}Vo> selectByPage(${clazzInfo.className}Vo record, int pageBegin, int pageSize) {
-    return copyList(${clazzInfo.classNameFirstLowerCase}Dao.selectByPage(copyPropertiesToClazz(record, ${clazzInfo.className}.class), pageBegin, pageSize), ${clazzInfo.className}Vo.class);
+        return copyList(${clazzInfo.classNameFirstLowerCase}Dao.selectByPage(copyPropertiesToClazz(record, ${clazzInfo.className}.class), pageBegin, pageSize), ${clazzInfo.className}Vo.class);
     }
 
     @Override
     public int selectCount(${clazzInfo.className}Vo record) {
-    return ${clazzInfo.classNameFirstLowerCase}Dao.selectCount(copyPropertiesToClazz(record, ${clazzInfo.className}.class));
+        return ${clazzInfo.classNameFirstLowerCase}Dao.selectCount(copyPropertiesToClazz(record, ${clazzInfo.className}.class));
     }
 
 }

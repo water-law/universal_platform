@@ -61,7 +61,7 @@ zuul:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:123456@172.16.10.38:8763/eureka  #注册 中心已经开启认证
+      defaultZone: http://admin:123456@localhost:8763/eureka  #注册 中心已经开启认证
       #defaultZone: http://admin:123456@119.23.133.182:8761/eureka  #注册 中心已经开启认证
     healthcheck:
       enabled: true

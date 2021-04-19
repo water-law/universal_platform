@@ -1,0 +1,7 @@
+.idea
+/target/
+*.iml
+.idea/
+application-*.yml
+bootstrap-*.yml
+/weitu_log/

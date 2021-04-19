@@ -1,0 +1,25 @@
+server:
+  port: 8763
+
+spring:
+  application:
+    name: universal-platform-eureka
+
+eureka:
+  client:
+    register-with-eureka: false # 是否将自己注册到eureka中
+    fetch-registry: false #是否从Eureka中获取注册信息
+    service-url:
+      defaultZone: http://admin:123456@172.16.10.38:8763/eureka #注册 中心已经开启认证
+#    #清理无效节点,默认60*1000毫秒,即60秒
+#    eviction-interval-timer-in-ms: 10000
+  server:
+    enable-self-preservation: false
+    #清理无效节点,默认60*1000毫秒,即60秒
+    eviction-interval-timer-in-ms: 10000
+security:
+  basic:
+    enabled: true # 开启基于Http basic的认证
+    user: # 配置用户的账号信息
+      name: admin
+      password: 123456

@@ -78,7 +78,7 @@ public class ${clazzInfo.className}Controller {
 
     @PostMapping("/get/list")
     @ApiOperation(value = "${clazzInfo.tableRemark}列表查询")
-    public MessageResponse getList(${clazzInfo.className}Vo record) {
+    public MessageResponse getList(@RequestBody ${clazzInfo.className}Vo record) {
         try {
             PageVo pageVo = PageVo.getPageVo(record.getPageBegin(), record.getPageSize());
             PageResult<${clazzInfo.className}Vo> result =  ${clazzInfo.classNameFirstLowerCase}BusiService.selectByPage(record, pageVo.getPageBegin(), pageVo.getPageSize());
